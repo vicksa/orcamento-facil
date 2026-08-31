@@ -1,0 +1,34 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "../vendor/shadcn-tailwind-4.13.0.css";
+
+:root {
+  --background: #f6f5f1; --foreground: #242520; --card: #ffffff; --card-foreground: #242520;
+  --popover: #ffffff; --popover-foreground: #242520; --primary: #d85832; --primary-foreground: #ffffff;
+  --secondary: #efeee9; --secondary-foreground: #242520; --muted: #efeee9; --muted-foreground: #78766f;
+  --accent: #f7e7de; --accent-foreground: #9a3217; --destructive: #d83b3b; --border: #e6e3dc;
+  --input: #dedbd3; --ring: #d85832; --radius: .85rem;
+}
+@theme inline {
+  --color-background: var(--background); --color-foreground: var(--foreground); --color-card: var(--card); --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover); --color-popover-foreground: var(--popover-foreground); --color-primary: var(--primary); --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary); --color-secondary-foreground: var(--secondary-foreground); --color-muted: var(--muted); --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent); --color-accent-foreground: var(--accent-foreground); --color-destructive: var(--destructive); --color-border: var(--border); --color-input: var(--input); --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px); --radius-md: calc(var(--radius) - 2px); --radius-lg: var(--radius); --radius-xl: calc(var(--radius) + 4px);
+  --font-sans: "Avenir Next", "Segoe UI", sans-serif;
+}
+* { border-color: var(--border); }
+body { background: var(--background); color: var(--foreground); font-family: "Avenir Next", "Segoe UI", sans-serif; }
+button { cursor: pointer; }
+.nav-item { display: flex; width: 100%; align-items: center; gap: .75rem; border-radius: .75rem; padding: .7rem .85rem; color: #77746d; font-size: .875rem; font-weight: 600; transition: .2s; }
+.nav-item svg { width: 1rem; height: 1rem; }
+.nav-item:hover { background: #f0eee9; color: #292a25; }
+.nav-active { background: #f6e6de; color: #b83b1d; }
+.metric-card { border-color: #e5e2da; background: white; padding: 0; box-shadow: none; border-radius: 1rem; }
+.metric-icon { float: right; display: grid; place-items: center; width: 2.5rem; height: 2.5rem; border-radius: .8rem; }
+.metric-icon svg { width: 1.1rem; }
+.metric-label { color: #77746d; font-size: .78rem; font-weight: 600; }
+.metric-value { margin-top: .5rem; font-size: 1.65rem; line-height: 1; font-weight: 750; letter-spacing: -.04em; }
+.metric-note { display: flex; align-items: center; gap: .2rem; margin-top: 1rem; font-size: .72rem; font-weight: 600; }
+.metric-note svg { width: .8rem; height: .8rem; }
+.form-label { display: grid; gap: .45rem; color: #57554f; font-size: .82rem; font-weight: 650; }
